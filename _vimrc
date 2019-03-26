@@ -13,11 +13,11 @@ endif
 
 syntax on
 
-" let mapleader=" "
 
-" set nocompatible
+set nocompatible
 
 " Indentation & Tabs
+set backspace=indent,eol,start " more powerfull backspaceing
 
 set autoindent
 
