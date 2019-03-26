@@ -13,6 +13,8 @@ endif
 
 syntax on
 
+" let mapleader=" "
+
 " set nocompatible
 
 " Indentation & Tabs
@@ -76,6 +78,10 @@ set visualbell
 set errorbells
 
 set noundofile
+
+" key maps
+let mapleader=" "
+map <leader>a ggVG
 
 " Vundle configuration
 filetype off                  " required
