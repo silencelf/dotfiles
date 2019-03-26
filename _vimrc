@@ -11,6 +11,8 @@ if has("gui_running")
   endif
 endif
 
+syntax on
+
 " set nocompatible
 
 " Indentation & Tabs
