@@ -99,6 +99,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'junegunn/fzf'
 Plugin 'kien/ctrlp.vim'
+Plugin 'jreybert/vimagit'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
