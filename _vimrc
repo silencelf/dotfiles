@@ -82,6 +82,7 @@ set noundofile
 " key maps
 let mapleader=" "
 map <leader>a ggVG
+map <leader>n :NERDTreeToggle<CR>
 
 " Vundle configuration
 filetype off                  " required
@@ -97,6 +98,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'junegunn/fzf'
+Plugin 'kien/ctrlp.vim'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
