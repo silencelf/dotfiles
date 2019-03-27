@@ -102,21 +102,6 @@ set incsearch
 set ignorecase
 set smartcase
 
-" Tab completion
-" will insert tab at beginning of line,
-" will use completion if not at beginning
-set wildmode=list:longest,list:full
-function! InsertTabWrapper()
-    let col = col('.') - 1
-    if !col || getline('.')[col - 1] !~ '\k'
-        return "\<Tab>"
-    else
-        return "\<C-p>"
-    endif
-endfunction
-inoremap <Tab> <C-r>=InsertTabWrapper()<CR>
-inoremap <S-Tab> <C-n>
-
 " Switch between the last two files
 nnoremap <Leader><Leader> <C-^>
 
@@ -198,7 +183,7 @@ Plugin 'flazz/vim-colorschemes'
 Plugin 'junegunn/fzf'
 Plugin 'kien/ctrlp.vim'
 Plugin 'tpope/vim-surround'
-" Plugin 'jreybert/vimagit'
+Plugin 'pangloss/vim-javascript'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
