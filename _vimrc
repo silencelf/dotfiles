@@ -162,6 +162,9 @@ if has("gui_running")
   elseif has("gui_win32")
     set guifont=Consolas:h11:cANSI
   endif
+
+  set guioptions -=m
+  set guioptions -=T
 endif
 
 map <leader>a ggVG
@@ -184,6 +187,7 @@ Plugin 'junegunn/fzf'
 Plugin 'kien/ctrlp.vim'
 Plugin 'tpope/vim-surround'
 Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
