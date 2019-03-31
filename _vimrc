@@ -196,7 +196,11 @@ call vundle#end()            " required
 filetype plugin indent on    " required
 
 " when themes are installed, set color scheme
-colorscheme jellybeans
+if has("gui_running")
+    colorscheme jellybeans
+else
+    colorscheme molokai
+endif
 
 " ctrlp configurations
 " set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
