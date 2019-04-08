@@ -186,21 +186,25 @@ call vundle#begin('$HOME/.vim/bundle/')
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'flazz/vim-colorschemes'
-Plugin 'junegunn/fzf'
 Plugin 'kien/ctrlp.vim'
 Plugin 'tpope/vim-surround'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
+Plugin 'vim-syntastic/syntastic'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
 
 " when themes are installed, set color scheme
 if has("gui_running")
-    colorscheme jellybeans
+    colorscheme molokai " instead of jellybeans
 else
     colorscheme molokai
+    set colorcolumn=
 endif
+
+let python_hightlight_all=1
+syntax on
 
 " ctrlp configurations
 " set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
