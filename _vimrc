@@ -207,6 +207,10 @@ endif
 let python_hightlight_all=1
 syntax on
 
+" syntastic checker
+let g:syntastic_python_checkers = ['pylint']
+let g:syntastic_javascript_checkers = ['eslint']
+
 " ctrlp configurations
 " set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
 set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
