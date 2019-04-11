@@ -191,7 +191,8 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'tpope/vim-surround'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
-Plugin 'vim-syntastic/syntastic'
+" Plugin 'vim-syntastic/syntastic'
+Plugin 'w0rp/ale'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -204,12 +205,9 @@ else
     set colorcolumn=
 endif
 
-let python_hightlight_all=1
-syntax on
-
-" syntastic checker
-let g:syntastic_python_checkers = ['pylint']
-let g:syntastic_javascript_checkers = ['eslint']
+let g:ale_linters = {
+\   'javascript': ['eslint'],
+\}
 
 " ctrlp configurations
 " set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
