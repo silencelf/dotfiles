@@ -92,7 +92,6 @@ endif
 
 " Make it obvious where 80 characters is
 set textwidth=80
-set colorcolumn=+1
 
 " Numbers
 set numberwidth=5
@@ -201,11 +200,13 @@ filetype plugin indent on    " required
 
 " when themes are installed, set color scheme
 if has("gui_running")
-    colorscheme molokai " instead of jellybeans
+    set colorcolumn=+1
 else
-    colorscheme molokai
     set colorcolumn=
 endif
+
+colorscheme molokai
+let g:airline_theme='molokai'
 
 let g:ale_linters = {
 \   'javascript': ['eslint'],
