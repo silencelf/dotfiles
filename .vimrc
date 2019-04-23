@@ -1,5 +1,3 @@
-lan en
-
 set encoding=utf-8
 
 " Leader
@@ -177,8 +175,8 @@ map <leader>n :NERDTreeToggle<CR>
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
-set rtp+=%HOME%/.vim/bundle/Vundle.vim/
-call vundle#begin('$HOME/.vim/bundle/')
+set rtp+=~/.vim/bundle/Vundle.vim/
+call vundle#begin('~/.vim/bundle/')
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
 
