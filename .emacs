@@ -29,7 +29,12 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages (quote (use-package evil))))
+ '(ansi-color-faces-vector
+   [default default default italic underline success warning error])
+ '(ansi-color-names-vector
+   ["black" "red3" "ForestGreen" "yellow3" "blue" "magenta3" "DeepSkyBlue" "gray50"])
+ '(custom-enabled-themes (quote (deeper-blue)))
+ '(package-selected-packages (quote (evil-magit magit use-package evil))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -37,4 +42,31 @@
  ;; If there is more than one, they won't work right.
  )
 
-(setq ring-bell-function 'ignore)
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '((python . t)
+   (js .t)))
+
+(require 'evil-magit)
+;; for windows.....you known it is hard on windows
+(setq inhibit-startup-message t)
+(setq-default visible-bell t)
+(setq use-file-dialog nil)
+(setq use-dialog-box nil)
+(setq-default buffer-file-coding-system 'utf-8-unix)
+(set-terminal-coding-system 'utf-8)
+(set-language-environment 'utf-8)
+(set-keyboard-coding-system 'utf-8)
+(prefer-coding-system 'utf-8)
+(setq locale-coding-system 'utf-8)
+(set-default-coding-systems 'utf-8)
+(set-terminal-coding-system 'utf-8)
+
+;; Type F9 to call M-x compile
+(global-set-key (kbd "<f9>") #'compile)
+;; Type Ctrl + F9 to call M-x recompile - running the compilation command again. 
+(global-set-key (kbd "<C-f9>")
+                (lambda () (interactive)
+                  (save-buffer)
+                  (recompile)                
+                  ))
