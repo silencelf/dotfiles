@@ -13,7 +13,6 @@ set showcmd       " display incomplete commands
 set incsearch     " do incremental searching
 set laststatus=2  " Always display the status line
 set autowrite     " Automatically :write before running commands
-set cursorline
 
 " turn off error bells
 set belloff=all
@@ -203,8 +202,10 @@ else
     set colorcolumn=
 endif
 
-colorscheme molokai
-let g:airline_theme='molokai'
+" set color scheme
+" colorscheme molokai
+" let g:airline_theme='molokai'
+let g:airline_powerline_fonts=1
 
 let g:ale_linters = {
 \   'javascript': ['eslint'],
