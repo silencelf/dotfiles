@@ -68,5 +68,5 @@
 (global-set-key (kbd "<C-f9>")
                 (lambda () (interactive)
                   (save-buffer)
-                  (recompile)                
+                  (recompile)
                   ))
