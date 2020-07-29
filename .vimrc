@@ -186,9 +186,10 @@ Plugin 'w0rp/ale'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'tpope/vim-fugitive'
-Plugin 'leafgarland/typescript-vim'
-Plugin 'godlygeek/tabular'
+Plugin 'easymotion/vim-easymotion'
 Plugin 'plasticboy/vim-markdown'
+" Plugin 'leafgarland/typescript-vim'
+" Plugin 'godlygeek/tabular'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
