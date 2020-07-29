@@ -1,3 +1,3 @@
 #! /bin/bash
 
-df -h | awk '/dev\/sda1/ {print $3,$5}'
+df -h / | awk '/dev\/sda1/ {print $4,$5}'
