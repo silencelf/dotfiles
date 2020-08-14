@@ -220,3 +220,7 @@ let g:ctrlp_custom_ignore = {
   \ 'file': '\v\.(exe|so|dll)$',
   \ 'link': 'some_bad_symbolic_links',
   \ }
+
+
+" custom bindings
+nnoremap S :%s//g<Left><Left>
