@@ -1,9 +1,9 @@
 VBoxClient-all &
 
 # Statusbar loop
-while true; do
-	xsetroot -name "$(date)"
-	sleep 1m # update time every minute
+while xsetroot -name "`date +'%F %R'` `uptime | sed 's/.*,//'`"
+do
+  sleep 5
 done &
 
 while true; do
