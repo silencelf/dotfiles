@@ -7,6 +7,9 @@ do
 done &
 
 while true; do
+  # wallpaper
+  ~/.fehbg
+
 	# log stderror to a file
 	dwm 2> ~/.dwm.log
 	# No error logging
