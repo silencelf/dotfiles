@@ -165,7 +165,6 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'plasticboy/vim-markdown'
 " Plugin 'leafgarland/typescript-vim'
-" Plugin 'godlygeek/tabular'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -209,10 +208,9 @@ nnoremap S :%s//g<Left><Left>
 map <leader>a ggVG
 map <leader>n :NERDTreeToggle<CR>
 " Switch between the last two files
-nnoremap <Leader><Leader> <C-^>
+nnoremap <Leader><Tab> <C-^>
 
 " vim-test mappings
-nnoremap <silent> <Leader>t :TestFile<CR>
 nnoremap <silent> <Leader>s :TestNearest<CR>
 nnoremap <silent> <Leader>l :TestLast<CR>
 nnoremap <silent> <Leader>a :TestSuite<CR>
