@@ -164,6 +164,7 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'tpope/vim-fugitive'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'plasticboy/vim-markdown'
+Plugin 'chr4/nginx.vim'
 " Plugin 'leafgarland/typescript-vim'
 
 call vundle#end()            " required
