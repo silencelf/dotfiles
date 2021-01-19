@@ -163,7 +163,7 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'tpope/vim-fugitive'
 Plugin 'easymotion/vim-easymotion'
-Plugin 'plasticboy/vim-markdown'
+" Plugin 'plasticboy/vim-markdown'
 Plugin 'chr4/nginx.vim'
 " Plugin 'leafgarland/typescript-vim'
 
@@ -217,8 +217,8 @@ nnoremap <silent> <Leader>l :TestLast<CR>
 nnoremap <silent> <Leader>a :TestSuite<CR>
 nnoremap <silent> <Leader>gt :TestVisit<CR>
 
-" Run commands that require an interactive shell
-nnoremap <Leader>r :RunInInteractiveShell<Space>
+"save & run with go run
+nnoremap <Leader>r :w !go run %<CR>
 
 " Move between linting errors
 nnoremap ]r :ALENextWrap<CR>
