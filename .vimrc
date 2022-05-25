@@ -164,6 +164,7 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'tpope/vim-fugitive'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'chr4/nginx.vim'
+Plugin '/sebdah/vim-delve'
 " Plugin 'leafgarland/typescript-vim'
 
 call vundle#end()            " required
@@ -177,7 +178,7 @@ else
 endif
 
 " set color scheme
-colorscheme molokai
+colorscheme default
 let g:airline_theme='molokai'
 let g:airline_powerline_fonts=0
 
