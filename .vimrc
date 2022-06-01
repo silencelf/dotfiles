@@ -197,6 +197,7 @@ let g:ctrlp_custom_ignore = {
 
 
 " custom bindings
+tnoremap <Esc> <C-\><C-n>
 
 " Quicker window movement
 nnoremap <C-j> <C-w>j
