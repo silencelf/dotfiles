@@ -7,7 +7,8 @@ sudo apt update
 echo "current tcp_congestion_control: "
 sysctl net.ipv4.tcp_congestion_control
 
-sudo tee -a ./test.txt >/dev/null <<EOT
+# setup kernal settings, the file name needs to be updated
+sudo tee -a /etc/sysctl.conf >/dev/null <<EOT
 net.core.default_qdisc=fq
 net.ipv4.tcp_congestion_control=bbr
 vm.swappiness=10
@@ -31,11 +32,11 @@ st:latest
 # setup swap
 echo 'setup swap...'
 sudo fallocate -l 1G /swapfile &&
-sudo chmod 600 /swapfile &&
-ls -lh /swapfile &&
-sudo mkswap /swapfile &&
-sudo swapon /swapfile &&
-sudo swapon --show &&
-free -h &&
-sudo cp /etc/fstab /etc/fstab.bak &&
-echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab
+	sudo chmod 600 /swapfile &&
+	ls -lh /swapfile &&
+	sudo mkswap /swapfile &&
+	sudo swapon /swapfile &&
+	sudo swapon --show &&
+	free -h &&
+	sudo cp /etc/fstab /etc/fstab.bak &&
+	echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab
